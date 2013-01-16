@@ -6,7 +6,7 @@ function update_ninja (token, device, data)
   	data = '{ "DA" : "'.. data ..'" }',
     headers = { ['Content-Type'] = 'application/json' }
   	}).statuscode
-  end
+  
   
   return "something2"
 
