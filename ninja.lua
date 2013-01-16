@@ -1,4 +1,3 @@
-
 function update_ninja (token, device, data)
 
   local ninja = http.request({
@@ -8,5 +7,7 @@ function update_ninja (token, device, data)
     headers = { ['Content-Type'] = 'application/json' }
   	}).statuscode
   end
+  
+  return ninja
 
 end
