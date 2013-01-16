@@ -1,15 +1,14 @@
--- function update_ninja (token, device, data)
--- 
---   local ninja = http.request({
---   	method='put',
---   	url='https://api.ninja.is/rest/v0/device/' .. device .. '?user_access_token=' .. token,
---   	data = '{ "DA" : "'.. data ..'" }',
---     headers = { ['Content-Type'] = 'application/json' }
---   	}).statuscode
---   end
--- 
--- end
+function update_ninja (token, device, data)
 
-function update_ninja (x, y, z)
-  return "something"
+  local ninja = http.request({
+  	method='put',
+  	url='https://api.ninja.is/rest/v0/device/' .. device .. '?user_access_token=' .. token,
+  	data = '{ "DA" : "'.. data ..'" }',
+    headers = { ['Content-Type'] = 'application/json' }
+  	}).statuscode
+  end
+  
+  return "something2"
+
 end
+
