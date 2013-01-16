@@ -1,14 +1,20 @@
-function update_ninja (token, device, data)
+Ninja = class(
 
-  local ninja = http.request({
-  	method='put',
-  	url='https://api.ninja.is/rest/v0/device/' .. device .. '?user_access_token=' .. token,
-  	data = '{ "DA" : "'.. data ..'" }',
-    headers = { ['Content-Type'] = 'application/json' }
-  	}).statuscode
-  
-  
-  return "something2"
-
+function(a,token, device)
+   a.token = token
+   a.device = device
 end
 
+)
+
+function Ninja:eyes(color)
+    
+    local status = http.request({
+     	method='put',
+     	url='https://api.ninja.is/rest/v0/device/' .. a.device .. '?user_access_token=' .. a.token,
+     	data = '{ "DA" : "'.. color ..'" }',
+       headers = { ['Content-Type'] = 'application/json' }
+     	}).statuscode
+     	
+     return status
+end
