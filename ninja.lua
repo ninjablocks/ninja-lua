@@ -8,6 +8,6 @@ function update_ninja (token, device, data)
   	}).statuscode
   end
   
-  return ninja
+  return ninja = ninja
 
 end
